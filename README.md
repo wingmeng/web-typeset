@@ -2,4 +2,4 @@
     @Author: Wing Meng
     @Update: 2017-09-29
 ---
-1. [标题两端对齐（中英文数字混排）](#)
+1. [标题两端对齐（中英文数字混排）](https://wingmeng.github.io/web-typeset/title-justify.html)
