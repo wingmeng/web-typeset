@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <style>
+		body {font:14px/1.42858 normal tahoma, 'microsoft yahei';}
+		dd {margin:0;}
+
+		.demo {width:500px; box-sizing: border-box; padding: 0 15px 15px; margin:20px auto; border:1px solid #ccc;}
+		
+		.demo > dl {overflow: hidden; line-height: 1.75;}
+		.demo dt {float: left; clear:left; height: 1.75em; margin-right: 1em; overflow: hidden;}
+		.demo dd {color:#09c;}
+
+		.justify {text-align: justify;}
+		.justify:after {content: ''; display: inline-block; width: 100%;}
+    </style>
+    <title>标题两端对齐（中英文数字混排）</title>
+</head>
+<body>
+    <div class="demo">
+        <h2>混排测试</h2>
+        <dl id="list">
+            <dt class="justify">类别</dt>
+                <dd>人工智能</dd>
+            <dt class="justify">防护性</dt>
+                <dd>IP65</dd>			
+            <dt class="justify">适用范围</dt>
+                <dd>工厂、政府、企业、学校、超市、卖场、KTV、游艺厅、事业单位、煎饼铺子、路边摊等</dd>
+            <dt class="justify">系统支持度</dt>
+                <dd>Windows XP/Vista/7/8/10</dd>
+            <dt class="justify">其他注意事项</dt>
+                <dd>轻拿轻放，防跌落，防磕碰，防火，防偷，摔坏了、撞坏了不赔，请君且用且珍惜！</dd>
+            <dt class="justify">一年半价优惠券</dt>
+                <dd>数量有限，先到先得</dd>
+            <dt class="justify">126优惠券</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+            <dt class="justify">GitHub帐号</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+            <dt class="justify">Test English</dt>
+                <dd>true</dd>
+        </dl>
+    </div>
+    <script>
+        var list = document.getElementById('list'),
+            titles = list.getElementsByTagName('dt'),
+            contents = list.getElementsByTagName('dd'),
+            textArr = [];
+    
+        var getWidth = function(obj) {
+            return obj.offsetWidth;
+        }
+    
+        for (var i = 0; i < titles.length; i++) {
+            textArr.push(getWidth(titles[i]));
+        }
+    
+        var maxWidth = Math.max.apply(null, textArr);  // 获取标题中宽度最大值
+        textArr = null;
+        
+        for (var i = 0; i < titles.length; i++) {
+            titles[i].style.width = maxWidth + 'px';
+        }
+    </script>
+</body>
+</html>
