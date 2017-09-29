@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>报纸排版效果</title>
+    <style>
+        body {font:normal 14px/1.6 tahoma, simsun; -webkit-font-smoothing:antialiased;}
+        .box {font-size:12px; width:300px; text-align:justify;}
+        h6 {margin:15px 0 5px; font-size:16px;}
+    </style>
+</head>
+<body>
+    <h5>[仅IE支持] text-justify : auto | distribute | distribute-all-lines | distribute-center-last | inter-cluster | inter-ideograph | inter-word | kashida | newspaper</h5>
+    <dl>
+    <dt>取值：</dt>
+        <dd>auto : 默认值。允许浏览器代理用户确定使用的两端对齐法则 </dd>
+        <dd>distribute : 处理空格很像 newspaper ，适用于东亚文档。尤其是泰文 </dd>
+        <dd>distribute-all-lines : 两端对齐行的方式与 distribute 相同，也同样不包含两段对齐段落的最后一行。适用于表意字文档 </dd>
+        <dd>distribute-center-last : 未实现 </dd>
+        <dd>inter-cluster : 调整文本无词间空格的行。这种模式的调整是用于优化亚洲语言文档的 </dd>
+        <dd>inter-ideograph : 为表意字文本提供完全两端对齐。他增加或减少表意字和词间的空格 </dd>
+        <dd>inter-word : 通过增加字之间的空格对齐文本。该行为是对齐所有文本行最快的方法。它的两端对齐行为对段落的最后一行无效 </dd>
+        <dd>kashida : 通过拉长选定点的字符调整文本。这种调整模式是特别为阿拉伯脚本语言提供的。需要IE5.5+支持 </dd>
+        <dd>newspaper : 通过增加或减少字或字母之间的空格对齐文本。是用于拉丁文字母表两端对齐的最精确格式</dd>
+    </dl>
+    <h6>text-justify: inter-ideograph</h6>
+    <div class="box" style="text-justify:inter-ideograph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ut saepe mollitia in, sit provident deleniti corrupti sapiente modi iusto impedit. Tempore, cum neque. Debitis placeat temporibus nemo necessitatibus assumenda.
+    </div>
+    <div class="box" style="text-justify:inter-ideograph">
+        那人把奶奶放到地上，奶奶软得像面条一样，眯着羊羔般的眼睛。那人撕掉蒙面黑布，显出了真相。是他！奶奶暗呼苍天，一阵类似幸福的强烈震颤冲激得奶奶热泪盈眶。余占鳌把大蓑衣脱下来，用脚踩断了数十棵高粱，在高粱的尸体上铺上了蓑衣。
+    </div>
+
+    <h6>text-justify: newspaper</h6>
+    <div class="box" style="text-justify:newspaper">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ut saepe mollitia in, sit provident deleniti corrupti sapiente modi iusto impedit. Tempore, cum neque. Debitis placeat temporibus nemo necessitatibus assumenda.
+    </div>
+
+    <div class="box" style="text-justify:newspaper">
+        那人把奶奶放到地上，奶奶软得像面条一样，眯着羊羔般的眼睛。那人撕掉蒙面黑布，显出了真相。是他！奶奶暗呼苍天，一阵类似幸福的强烈震颤冲激得奶奶热泪盈眶。余占鳌把大蓑衣脱下来，用脚踩断了数十棵高粱，在高粱的尸体上铺上了蓑衣。
+    </div>
+</body>
+</html>
