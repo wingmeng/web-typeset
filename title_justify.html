@@ -11,11 +11,16 @@
 		.demo {width:500px; box-sizing: border-box; padding: 0 15px 15px; margin:20px auto; border:1px solid #ccc;}
 		
 		.demo > dl {overflow: hidden; line-height: 1.75;}
-		.demo dt {float: left; clear:left; height: 1.75em; margin-right: 1em; overflow: hidden;}
-		.demo dd {color:#09c;}
+        .demo dt, .demo dd {
+            padding: 5px 0;  /* 调整栏目垂直间隔 */
+            box-sizing: border-box;
+        }
+		.demo dt {position: relative; float: left; clear: left; height: 1.75em; margin-right: 1em;}
+		.demo dd {overflow: hidden; color:#09c;}
+        .demo dt:before {content: ":"; position: absolute; right: -.5em;}
 
 		.justify {text-align: justify;}
-		.justify:after {content: ''; display: inline-block; width: 100%;}
+		.justify:after {content: ""; display: inline-block; width: 100%;}
     </style>
     <title>标题两端对齐（中英文数字混排）</title>
 </head>
@@ -36,11 +41,13 @@
             <dt class="justify">一年半价优惠券</dt>
                 <dd>数量有限，先到先得</dd>
             <dt class="justify">126优惠券</dt>
-                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+                <dd>暂不支持</dd>
             <dt class="justify">GitHub帐号</dt>
                 <dd>wingmeng@qq.com</dd>
-            <dt class="justify">Test English</dt>
+            <dt class="justify">English</dt>
                 <dd>true</dd>
+            <dt class="justify">Two words</dt>
+                <dd>true</dd>                
         </dl>
     </div>
     <script>
