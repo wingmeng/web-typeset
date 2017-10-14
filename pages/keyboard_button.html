@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>键盘按钮效果</title>
+	<style>
+	body {font: 12px/1.8 normal 'microsoft yahei';}
+	.wrap {width: 600px; margin: 60px auto;}
+	.shortcut-key {
+		display: inline-block; *zoom: 1; 
+		padding: 3px 8px 5px;
+		white-space: nowrap;
+		vertical-align: middle;
+		font-family: 'simsun';
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 14px;
+		color: #808080;
+		background-color: #fcfcfc;
+		border: 1px solid #cccccc;
+		border-radius: 3px;		
+		text-transform: capitalize;
+		box-shadow: inset 0 -2px #ebebeb, inset 0 -3px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.3);
+	}
+	.shortcut-key.space {width: 160px; text-align: center;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<span class="shortcut-key" title="Up">&uarr;</span>
+	<span class="shortcut-key" title="Down">&darr;</span>
+	<span class="shortcut-key" title="Left">&larr;</span>
+	<span class="shortcut-key" title="Right">&rarr;</span>
+	<span class="shortcut-key" title="Ctrl">Ctrl</span>
+	<span class="shortcut-key" title="Alt">Alt</span>
+	<span class="shortcut-key" title="Shift">Shift</span>
+	<span class="shortcut-key space" title="Space">Space</span>
+
+	<p>
+		<span class="shortcut-key" title="Ctrl">Ctrl</span> + <span class="shortcut-key" title="V">V</span>
+	</p>
+</div>	
+</body>
+</html>
