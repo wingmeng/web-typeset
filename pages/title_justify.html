@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>标题两端对齐（中英文数字混排）</title>  
+    <title>标题两端对齐（中英文数字混排）</title>
     <style>
 		body {font:14px/1.42858 normal tahoma, 'microsoft yahei';}
 		dd {margin:0;}
 
 		.demo {width:500px; box-sizing: border-box; padding: 0 15px 15px; margin:20px auto; border:1px solid #ccc;}
-		
+
 		.demo > dl {overflow: hidden; line-height: 1.75;}
         .demo dt, .demo dd {
             padding: 5px 0;  /* 调整栏目垂直间隔 */
@@ -20,7 +20,7 @@
 
 		.justify {text-align: justify;}
 		.justify:after {content: ""; display: inline-block; width: 100%;}
-    </style>    
+    </style>
 </head>
 <body>
     <div class="demo">
@@ -29,7 +29,7 @@
             <dt class="justify">类别</dt>
                 <dd>人工智能</dd>
             <dt class="justify">防护性</dt>
-                <dd>IP65</dd>			
+                <dd>IP65</dd>
             <dt class="justify">适用范围</dt>
                 <dd>工厂、政府、企业、学校、超市、卖场、KTV、游艺厅、事业单位、煎饼铺子、路边摊等</dd>
             <dt class="justify">系统支持度</dt>
@@ -45,7 +45,7 @@
             <dt class="justify">English</dt>
                 <dd>true</dd>
             <dt class="justify">Two words</dt>
-                <dd>true</dd>                
+                <dd>true</dd>
         </dl>
     </div>
     <script>
@@ -53,18 +53,18 @@
             titles = list.getElementsByTagName('dt'),
             contents = list.getElementsByTagName('dd'),
             textArr = [];
-    
+
         var getWidth = function(obj) {
             return obj.offsetWidth;
         };
-    
+
         for (var i = 0; i < titles.length; i++) {
             textArr.push(getWidth(titles[i]));
         }
-    
+
         var maxWidth = Math.max.apply(null, textArr);  // 获取标题中宽度最大值
         textArr = null;
-        
+
         for (var i = 0; i < titles.length; i++) {
             titles[i].style.width = maxWidth + 'px';
         }
