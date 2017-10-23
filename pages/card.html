@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>卡片</title>
+	<style>
+		.row {margin:10px;}
+
+		.card {position:relative; display:inline-block; font-family:Tahoma; letter-spacing:1px; background:#59b5c2; border-radius:3px;}
+		.card:before {content:""; position:absolute; top:0; left:0; border:6px solid; border-color:#fff transparent transparent #fff;}
+		.card:after {content:""; position:absolute; top:12px; left:12px; width:15px; height:15px; background:#fff; border-radius:50%;}
+		.card-inner {height:100%; padding:14px 20px; margin-left:50px; border-left:1px dashed #eee;}
+		.card-inner-title {font-size:1em; line-height:1; font-weight:bold; color:#40717f; text-shadow:1px 1px 1px rgba(255,255,255,.3);}
+		.card-inner-desc {padding:0; margin:10px 0 0 0; list-style-type:none; font-size:.75em; line-height:1.6; color:#386b73;}
+	</style>
+</head>
+<body>
+	<div class="card">
+		<div class="card-inner">
+			<div class="card-inner-title">王大锤</div>
+			<ul class="card-inner-desc">
+				<li>性别：男</li>
+				<li>年龄：30岁</li>
+				<li>理想：为维护世界和平而奋斗</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
