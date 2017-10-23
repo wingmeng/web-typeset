@@ -14,3 +14,4 @@
 1. [键盘按钮效果](https://wingmeng.github.io/web-typeset/pages/keyboard_button.html) keyboard_button.html
 1. [弥散阴影效果](https://wingmeng.github.io/web-typeset/pages/diffuse_shadow.html) diffuse_shadow.html
 1. [发光输入框](https://wingmeng.github.io/web-typeset/pages/shine_input_box.html) shine_input_box.html
+1. [卡片](https://wingmeng.github.io/web-typeset/pages/card.html) card.html
