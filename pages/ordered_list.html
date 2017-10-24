@@ -9,6 +9,19 @@
 		.wrap {display:table-cell; line-height:2; padding:2em; background-color:#fff;}
 		h4 { padding-top:10px; border-top:1px dotted #ccc; font-family: Tahoma; font-size:16px; font-weight:normal; text-transform:lowercase;}
 		.tip { font-size:12px; padding:2px 5px; background-color: #c33; color:#fff;}
+
+		.reverse > li:before {
+			content: counter(reverse) '.';
+			left: -25px;
+			position: absolute;
+			text-align: right;
+			width: 20px;
+		}
+		.reverse li {
+			counter-increment: reverse -1;
+			position: relative;
+		}
+
 		.reset {padding-left:2em; counter-reset: order;}
 		.conter:before {content: counters(order,'-')'. '; counter-increment: order; font-family:Arial; font-size:14px; color:#999;}
 	</style>
@@ -61,6 +74,13 @@
 				<li>我是内容4</li>
 				<li>我是内容5</li>
 			</ol>
+			<ol class="reverse" style="list-style: none; counter-reset: reverse 6;">
+				<li>我是内容1</li>
+				<li>我是内容2</li>
+				<li>我是内容3</li>
+				<li>我是内容4</li>
+				<li>我是内容5</li>
+			</ol>
 			<ol style="list-style-type: decimal-leading-zero">
 				<li>我是内容1</li>
 				<li>我是内容2</li>
@@ -69,6 +89,13 @@
 				<li>我是内容5</li>
 			</ol>
 			<ol style="list-style-type: disc">
+				<li>我是内容1</li>
+				<li>我是内容2</li>
+				<li>我是内容3</li>
+				<li>我是内容4</li>
+				<li>我是内容5</li>
+			</ol>
+			<ol style="list-style-type: square">
 				<li>我是内容1</li>
 				<li>我是内容2</li>
 				<li>我是内容3</li>
@@ -146,13 +173,6 @@
 				<li>我是内容5</li>
 			</ol>
 			<ol style="list-style-type: none">
-				<li>我是内容1</li>
-				<li>我是内容2</li>
-				<li>我是内容3</li>
-				<li>我是内容4</li>
-				<li>我是内容5</li>
-			</ol>
-			<ol style="list-style-type: square">
 				<li>我是内容1</li>
 				<li>我是内容2</li>
 				<li>我是内容3</li>
