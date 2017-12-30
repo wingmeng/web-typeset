@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凹凸形状效果</title>
+    <style>
+        .box {text-align: center;}
+        .box > span {
+            display: inline-block;
+            width: 0;
+            margin: 3em;
+            font-size: 14px;
+            line-height: 18px;
+            color: transparent;
+        }
+        .box > span:before {
+            font-family: consolas, monaco, monospace;
+            outline: 2px solid #666;
+        }
+        .ao:before {content: "XXXX XX XXXX";}
+        .tu {direction: rtl;}
+        .tu:before {content: "XX XXXX XX";}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="ao"></span>
+        <span class="tu"></span>
+        <p>参考来源：<a href="http://demo.cssworld.cn/3/2-6.php" target="_blank">http://demo.cssworld.cn/3/2-6.php</a></p>
+    </div>
+</body>
+</html>
