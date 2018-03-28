@@ -1,9 +1,9 @@
 # web-typeset 网页排版/布局练习
     @Author: Wing Meng
-    @Update: 2017-12-30
+    @Update: 2018-03-28
 ---
 1. [文字样式（CSS font 属性）](https://wingmeng.github.io/web-typeset/pages/css_font_attribute.html) css_font_attribute.html
-1. [标题两端对齐（中英文数字混排）](https://wingmeng.github.io/web-typeset/pages/title_justify.html) title_justify.html
+1. [标题两端对齐（中英文数字混排）](https://wingmeng.github.io/web-typeset/pages/title_justify.html?20180328) title_justify.html
 1. [报纸排版效果](https://wingmeng.github.io/web-typeset/pages/newspaper_typeset.html) newspaper_typeset.html
 1. [首字下沉](https://wingmeng.github.io/web-typeset/pages/drop_cap.html) drop_cap.html
 1. [首行文字自定义](https://wingmeng.github.io/web-typeset/pages/first_line.html) first_line.html
