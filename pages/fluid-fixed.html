@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>满幅背景定宽内容</title>
+    <style>
+        body {padding: 0; margin: 0;}
+
+        .outer {
+            margin-top: 2em;
+            color: #fff;
+            background: rebeccapurple;
+        }
+
+        .box {
+            padding: 1em; /* backup */
+            padding: 1em calc(50% - 960px / 2);
+        }
+
+        .inner {
+            max-width: 960px;
+            padding: 1em 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer box">
+        <h2>新方式实现：满幅背景，定宽内容</h2>
+        <p>该效果来源自：《CSS 揭秘》 P182</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eligendi numquam soluta aspernatur velit, neque doloribus tempora deleniti sunt maiores doloremque. Magnam similique eaque nobis ipsa at quae dolorem eius?</p>
+    </div>
+
+    <div class="outer">
+        <div class="inner">
+            <h2>传统方式实现：满幅背景，定宽内容</h2>
+            <p>该效果来源自：《CSS 揭秘》 P182</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eligendi numquam soluta aspernatur velit, neque doloribus tempora deleniti sunt maiores doloremque. Magnam similique eaque nobis ipsa at quae dolorem eius?</p>
+        </div>
+    </div>
+</body>
+</html>
