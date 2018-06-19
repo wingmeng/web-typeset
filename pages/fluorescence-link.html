@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发光的锚链接</title>
+    <style>
+        body {text-align: center; font-size: 18px; line-height: 5em; background: #4c4c4c;}
+        a {
+            color: #00e;
+            text-decoration: none !important;
+            transition: all .3s ease-in-out;
+        }
+        a:visited {
+            color: #551a8b;
+        }
+        a:hover {
+            color: #06e;
+        }
+        a:focus {
+            outline: thin dotted;
+        }
+        a:hover, a:active {outline: 0;}
+
+        a, a:visited, a:active {color: #fff;}
+
+        a:hover, .glow {
+            color: #ff0;
+            text-shadow: 0 0 10px #ff0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">链接</a>
+</body>
+</html>
