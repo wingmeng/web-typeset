@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>margin auto 块元素对齐研究</title>
+    <style>
+        .box {width: 480px; padding: 10px; margin: 20px auto; font-size: 14px; border: 1px solid #ddd;}
+        .inner {width: 260px; line-height: 100px; text-align: center; color: #fff; background: #369;}
+        .inner > p {line-height: 2;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inner">默认情况</div>
+    </div>
+    <div class="box">
+        <div class="inner" style="margin-left:auto">块元素水平右对齐</div>
+    </div>
+    <div class="box">
+        <div class="inner" style="margin-left:calc(100% - 260px)">
+            <p>margin-left: auto; 效果等同于：</p>
+            <p>margin-left: calc(100% - 260px);</p>
+        </div>
+    </div>
+    <div class="box">
+        <div class="inner" style="margin-left:auto; margin-right: auto">块元素水平居中对齐</div>
+    </div>
+    <div class="box">
+        <div class="inner" style="margin-left: calc(50% - 260px / 2)">
+            <p>margin-left:auto; margin-right: auto; 效果等同于：</p>
+            <p>margin-left: calc(50% - 260px / 2);</p>
+        </div>
+    </div>
+    <div class="box" style="height:200px; writing-mode:vertical-lr">
+        <div class="inner" style="writing-mode:horizontal-tb; margin-top:auto; margin-bottom:auto">块元素垂直对齐</div>
+    </div>
+</body>
+</html>
