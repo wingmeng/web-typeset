@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>堆叠纸张效果</title>
+    <style>
+        body {background: #f5f5f5;}
+
+        .paper {
+            position: relative;
+            max-width: 500px;
+            min-height: 100px;
+            margin: 130px auto 40px;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+                        0 25px 50px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .paper:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 50px;
+            overflow: hidden;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+                        0 8px 0 -3px #f6f6f6,
+                        0 9px 1px -3px rgba(0, 0, 0, 0.2),
+                        0 16px 0 -6px #f6f6f6,
+                        0 17px 2px -6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="paper">
+        <h1>Hello World!</h1>
+        <p>I'm a white paper.</p>
+        <p>haha</p>
+        <p>~</p>
+    </div>
+</body>
+</html>
