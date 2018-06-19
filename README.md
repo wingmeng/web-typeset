@@ -1,6 +1,6 @@
 # web-typeset 网页排版/布局练习
     @Author: Wing Meng
-    @Update: 2018-03-28
+    @Update: 2018-06-19
 ---
 1. [文字样式（CSS font 属性）](https://wingmeng.github.io/web-typeset/pages/css_font_attribute.html) css_font_attribute.html
 1. [标题两端对齐（中英文数字混排）](https://wingmeng.github.io/web-typeset/pages/title_justify.html?20180328) title_justify.html
@@ -16,3 +16,4 @@
 1. [发光输入框](https://wingmeng.github.io/web-typeset/pages/shine_input_box.html) shine_input_box.html
 1. [卡片](https://wingmeng.github.io/web-typeset/pages/card.html) card.html
 1. [凹凸形状效果](https://wingmeng.github.io/web-typeset/pages/concave_convex_shape.html) concave_convex_shape.html
+1. [满幅背景定宽内容](https://wingmeng.github.io/web-typeset/pages/fluid-fixed.html) fluid-fixed.html
