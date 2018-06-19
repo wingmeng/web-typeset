@@ -18,3 +18,5 @@
 1. [凹凸形状效果](https://wingmeng.github.io/web-typeset/pages/concave_convex_shape.html) concave_convex_shape.html
 1. [满幅背景定宽内容](https://wingmeng.github.io/web-typeset/pages/fluid-fixed.html) fluid-fixed.html
 1. [堆叠纸张效果](https://wingmeng.github.io/web-typeset/pages/stacked-paper.html) stacked-paper.html
+1. [发光的锚链接](https://wingmeng.github.io/web-typeset/pages/fluorescence-link.html) fluorescence-link.html
+1. [margin auto 块元素对齐研究](https://wingmeng.github.io/web-typeset/pages/margin-auto.html) margin-auto.html
