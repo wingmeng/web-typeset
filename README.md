@@ -17,3 +17,4 @@
 1. [卡片](https://wingmeng.github.io/web-typeset/pages/card.html) card.html
 1. [凹凸形状效果](https://wingmeng.github.io/web-typeset/pages/concave_convex_shape.html) concave_convex_shape.html
 1. [满幅背景定宽内容](https://wingmeng.github.io/web-typeset/pages/fluid-fixed.html) fluid-fixed.html
+1. [堆叠纸张效果](https://wingmeng.github.io/web-typeset/pages/stacked-paper.html) stacked-paper.html
