@@ -1,6 +1,6 @@
 # web-typeset 网页排版/布局练习
     @Author: Wing Meng
-    @Update: 2018-06-19
+    @Update: 2019-01-16
 ---
 1. [文字样式（CSS font 属性）](https://wingmeng.github.io/web-typeset/pages/css_font_attribute.html) css_font_attribute.html
 1. [标题两端对齐（中英文数字混排）](https://wingmeng.github.io/web-typeset/pages/title_justify.html?20180328) title_justify.html
@@ -20,3 +20,4 @@
 1. [堆叠纸张效果](https://wingmeng.github.io/web-typeset/pages/stacked-paper.html) stacked-paper.html
 1. [发光的锚链接](https://wingmeng.github.io/web-typeset/pages/fluorescence-link.html) fluorescence-link.html
 1. [margin auto 块元素对齐研究](https://wingmeng.github.io/web-typeset/pages/margin-auto.html) margin-auto.html
+1. [左右两端对齐型列表的五种布局](https://wingmeng.github.io/web-typeset/pages/five_layouts_of_left-right_aligned_lists.html) five_layouts_of_left-right_aligned_lists.html

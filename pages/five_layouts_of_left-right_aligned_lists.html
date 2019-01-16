@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		[v-cloak] {display: none;}
+		input[type="range"] {margin-left: 2em; vertical-align: middle;}
+		input[type="range"]::before {content: attr(min); margin-left: -2em;}
+		input[type="range"]::after {content: attr(max); margin-right: -2em;}
+
+		dl {
+			padding: 5px 15px;
+			line-height: 1.5;
+			box-sizing: border-box;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			box-shadow: 1px 1px 0 rgba(0,0,0,.15);
+		}
+
+		dt, dd {padding: .36em 0;}
+		dt {color: #999;}
+		dd {margin: 0; word-break: break-all; text-align: right;}
+		dd:empty::before {content: "--"; color: #ccc;}
+
+		/* 方案1 */
+		.case-1 dt {position: absolute;}
+		.case-1 dd {margin-left: 5em;}
+
+		/* 方案2 */
+		.case-2 {display: flex; flex-wrap: wrap;}
+		.case-2 dt {width: 5em;}
+		.case-2 dd {width: calc(100% - 5em);}
+
+		/* 方案3 */
+		.case-3 {display: grid; grid-template-columns: auto 1fr; grid-column-gap: 1em;}
+
+		/* 方案4 */
+		.case-4 {overflow: hidden;}
+		.case-4 dt {float: left; width: 5em;}
+		.case-4 dd {overflow: hidden;}
+
+		/* 方案5 */
+		/* 1.5em 是行高，4px 是内边距 */
+		.case-5 dd {margin-left: 5em; margin-top: calc((1.5em + .36em * 2) * -1);}
+	</style>
+</head>
+<body>
+	<div id="app" v-cloak>
+		<p>
+			宽度调节：<input type="range" min="240" max="500" v-model="width">
+		</p>
+		<p>
+			字号调节：<input type="range" min="12" max="16" v-model="fontSize">
+		</p>
+
+		<div v-bind:style="{width: width + 'px', 'font-size': fontSize + 'px'}">
+			<list-card v-for="(item, idx) in [].length = caseNum"
+				v-bind:class="'case-' + (idx + 1)"
+				v-bind:lists="lists"></list-card>
+		</div>
+	</div>
+
+	<template id="tpl_content">
+		<dl>
+			<template v-for="list in lists">
+				<dt>{{list.title}}</dt>
+				<dd>{{list.content}}</dd>
+			</template>
+		</dl>
+	</template>
+
+	<p>本文案例参考自张鑫旭的博客 from <a href="https://www.zhangxinxu.com/wordpress/?p=8375" target="_blank" rel="noopener noreferrer">https://www.zhangxinxu.com/wordpress/?p=8375</a></p>
+
+	<script src="https://cdn.bootcss.com/vue/2.5.21/vue.min.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			components: {
+				'list-card': {
+					props: ['lists'],
+					template: '#tpl_content'
+				}				
+			},
+			data: {
+				width: 300,
+				fontSize: 14,
+				caseNum: 5,
+				lists: [
+					{
+						title: '手机系统',
+						content: 'Android'
+					}, {
+						title: '登录方式',
+						content: 'QQ互联'
+					}, {
+						title: '绑定时间',
+						content: '2019-01-02 11:10'
+					}, {
+						title: '绑定状态',
+						content: '有效'
+					}, {
+						title: '预留信息',
+						content: ''
+					}, {
+						title: '备注',
+						content: '如果需要修改绑定，请联系HR进行修改'
+					}
+				]
+			}
+		});
+	</script>
+</body>
+</html>
